@@ -1,0 +1,3 @@
+${PODS_ROOT}/Target Support Files/Pods-HotDog/Pods-HotDog-frameworks.sh
+${BUILT_PRODUCTS_DIR}/ConstraintsMonitor/ConstraintsMonitor.framework
+${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework

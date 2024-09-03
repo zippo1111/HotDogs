@@ -1,0 +1,20 @@
+PODS:
+  - ConstraintsMonitor (1.0.0)
+  - SnapKit (5.7.1)
+
+DEPENDENCIES:
+  - ConstraintsMonitor
+  - SnapKit
+
+SPEC REPOS:
+  trunk:
+    - ConstraintsMonitor
+    - SnapKit
+
+SPEC CHECKSUMS:
+  ConstraintsMonitor: a98cfa8aae81d5e07e427700361d0cc813edc078
+  SnapKit: d612e99e678a2d3b95bf60b0705ed0a35c03484a
+
+PODFILE CHECKSUM: bd9e4da2d458bb2767887d41fba73ba4562e5fa9
+
+COCOAPODS: 1.15.2
