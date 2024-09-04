@@ -133,8 +133,8 @@ final class MenuController: UIViewController {
 }
 
 fileprivate enum Constants {
-    static let navigationHeightInitial: CGFloat = 67 //если 112 то высокий navbar, но нет глюка searchbar, can be also just animated
-    static let navigationHeightWithSearchBar: CGFloat = 112 //если 112 то высокий navbar, но нет глюка searchbar, can be also just animated
-    static let topOffset = 50
-    static let leftOffset = 20
+    static let navigationHeightInitial: CGFloat = 67
+    static let navigationHeightWithSearchBar: CGFloat = 112
+    static let topOffset: CGFloat = 50
+    static let leftOffset: CGFloat = 20
 }
