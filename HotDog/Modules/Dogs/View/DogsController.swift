@@ -167,7 +167,6 @@ final class DogsController: UIViewController {
     private let collectionView = DogsCollectionView()
     private let spinner = UIActivityIndicatorView()
     private let searchController = DogsSearchController(searchResultsController: nil)
-    private let delayHelper = Delays()
 }
 
 extension DogsController {

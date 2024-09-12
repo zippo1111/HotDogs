@@ -24,7 +24,6 @@
 		9A6F66FC2C7F2663005813CA /* Extension+ScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F66FA2C7F2663005813CA /* Extension+ScrollView.swift */; };
 		9A6F67002C7F2679005813CA /* ImageDownloaderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F66FE2C7F2679005813CA /* ImageDownloaderService.swift */; };
 		9A6F67012C7F2679005813CA /* DogsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F66FF2C7F2679005813CA /* DogsService.swift */; };
-		9A6F67092C7F27AE005813CA /* FBAnalytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F67082C7F27AE005813CA /* FBAnalytics.swift */; };
 		9A6F670B2C7F2A16005813CA /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F670A2C7F2A16005813CA /* MenuController.swift */; };
 		9A6F670F2C7F2A33005813CA /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F670E2C7F2A33005813CA /* MenuViewModel.swift */; };
 		9A6F67122C7F2A88005813CA /* MenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F67112C7F2A88005813CA /* MenuModel.swift */; };
@@ -39,6 +38,7 @@
 		9AA5E1DE2C83D3C100E8D15F /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA5E1DD2C83D3C100E8D15F /* NavigationBar.swift */; };
 		9AA5E1E42C846DB200E8D15F /* SheetTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA5E1E12C846DB200E8D15F /* SheetTransitioningDelegate.swift */; };
 		9AA5E1E52C846DB200E8D15F /* SheetTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA5E1E22C846DB200E8D15F /* SheetTransition.swift */; };
+		9AD2C74C2C936C97000AC902 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD2C74B2C936C97000AC902 /* ImageLoader.swift */; };
 		C9B880A28B55E143DC66342A /* Pods_HotDogTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6944F48DFFD0FBF5EC1DB4F8 /* Pods_HotDogTests.framework */; };
 		F77F35C8FD4C87A0A3F791C6 /* Pods_HotDog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EF8609ABD9900BBC565C38F /* Pods_HotDog.framework */; };
 /* End PBXBuildFile section */
@@ -86,7 +86,6 @@
 		9A6F66FA2C7F2663005813CA /* Extension+ScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+ScrollView.swift"; sourceTree = "<group>"; };
 		9A6F66FE2C7F2679005813CA /* ImageDownloaderService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDownloaderService.swift; sourceTree = "<group>"; };
 		9A6F66FF2C7F2679005813CA /* DogsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogsService.swift; sourceTree = "<group>"; };
-		9A6F67082C7F27AE005813CA /* FBAnalytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBAnalytics.swift; sourceTree = "<group>"; };
 		9A6F670A2C7F2A16005813CA /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		9A6F670E2C7F2A33005813CA /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
 		9A6F67112C7F2A88005813CA /* MenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuModel.swift; sourceTree = "<group>"; };
@@ -101,6 +100,7 @@
 		9AA5E1DD2C83D3C100E8D15F /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		9AA5E1E12C846DB200E8D15F /* SheetTransitioningDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SheetTransitioningDelegate.swift; sourceTree = "<group>"; };
 		9AA5E1E22C846DB200E8D15F /* SheetTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SheetTransition.swift; sourceTree = "<group>"; };
+		9AD2C74B2C936C97000AC902 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		ACB613FBB9185DCB181EDA3F /* Pods-HotDog-HotDogUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotDog-HotDogUITests.debug.xcconfig"; path = "Target Support Files/Pods-HotDog-HotDogUITests/Pods-HotDog-HotDogUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C105112CB71E8BB72C5AF9BF /* Pods-HotDog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotDog.debug.xcconfig"; path = "Target Support Files/Pods-HotDog/Pods-HotDog.debug.xcconfig"; sourceTree = "<group>"; };
 		D3BB2377C097AA66D1F2BDF4 /* Pods_HotDog_HotDogUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HotDog_HotDogUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -173,7 +173,6 @@
 		9A6F66962C7F255D005813CA /* HotDog */ = {
 			isa = PBXGroup;
 			children = (
-				9A6F67062C7F272A005813CA /* Analytics */,
 				9A6F66F82C7F2663005813CA /* Extensions */,
 				9A6F66FD2C7F2679005813CA /* Services */,
 				9A6F66C92C7F25E8005813CA /* Shared */,
@@ -302,6 +301,7 @@
 			children = (
 				9A6F66FE2C7F2679005813CA /* ImageDownloaderService.swift */,
 				9A6F66FF2C7F2679005813CA /* DogsService.swift */,
+				9AD2C74B2C936C97000AC902 /* ImageLoader.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -324,14 +324,6 @@
 				9A6F670C2C7F2A1D005813CA /* View */,
 			);
 			path = Menu;
-			sourceTree = "<group>";
-		};
-		9A6F67062C7F272A005813CA /* Analytics */ = {
-			isa = PBXGroup;
-			children = (
-				9A6F67082C7F27AE005813CA /* FBAnalytics.swift */,
-			);
-			path = Analytics;
 			sourceTree = "<group>";
 		};
 		9A6F670C2C7F2A1D005813CA /* View */ = {
@@ -643,11 +635,11 @@
 				9A6F66FB2C7F2663005813CA /* Extension+Array.swift in Sources */,
 				9A6F66EB2C7F2634005813CA /* DogsModel.swift in Sources */,
 				9A6F67122C7F2A88005813CA /* MenuModel.swift in Sources */,
+				9AD2C74C2C936C97000AC902 /* ImageLoader.swift in Sources */,
 				9A67B4B82C867B1F0028C20C /* DogsSearchController.swift in Sources */,
 				9A6F66FC2C7F2663005813CA /* Extension+ScrollView.swift in Sources */,
 				9A6F66982C7F255D005813CA /* AppDelegate.swift in Sources */,
 				9A6F669A2C7F255D005813CA /* SceneDelegate.swift in Sources */,
-				9A6F67092C7F27AE005813CA /* FBAnalytics.swift in Sources */,
 				9A6F670B2C7F2A16005813CA /* MenuController.swift in Sources */,
 				9A6F67012C7F2679005813CA /* DogsService.swift in Sources */,
 				9A6F66EC2C7F2634005813CA /* DogBreed.swift in Sources */,

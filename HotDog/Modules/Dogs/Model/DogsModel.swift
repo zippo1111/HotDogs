@@ -35,36 +35,6 @@ struct DogsModel {
         return try? await downloaderService.downloadImage(from: url)
     }
 
-    func getImages(with viewModels: [DogBreedViewModel]?) async -> [Int: UIImage?]? {
-        var dictionary = [Int: URL?]()
-
-        viewModels?.forEach {
-            var value: URL?
-
-            guard let address = dogsService.getImageAddress(by: $0.imageId),
-                  let url = URL(string: address) else {
-                value = nil
-                return
-            }
-
-            value = url
-
-            dictionary.updateValue(value, forKey: $0.id)
-        }
-
-        return try? await downloaderService.loadImages(from: dictionary)
-    }
-
-    func inCache(_ id: Int) -> UIImage? {
-        imagesLoaded
-            .filter { $0.key == id }
-            .first?.value
-    }
-
-    mutating func addToCache(id: Int, image: UIImage) {
-        imagesLoaded.updateValue(image, forKey: id)
-    }
-
     private func getDogBreeds() async -> [DogBreedEntity]? {
         await dogsService.getDogBreeds()
     }

@@ -32,21 +32,5 @@ final class DogsViewModel {
         await model.getImage(by: id)
     }
 
-    func loadImages(by viewModels: [DogBreedViewModel]?) async -> [Int: UIImage?]? {
-        guard let images = await model.getImages(with: viewModels) else {
-            return nil
-        }
-
-        return images
-    }
-
-    func inCache(id: Int) -> UIImage? {
-        model.inCache(id)
-    }
-
-    func addToCache(id: Int, image: UIImage) {
-        model.addToCache(id: id, image: image)
-    }
-
     private var model = DogsModel()
 }

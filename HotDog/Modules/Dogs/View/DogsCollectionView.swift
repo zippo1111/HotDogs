@@ -29,7 +29,6 @@ final class DogsCollectionView: UICollectionView {
         showsHorizontalScrollIndicator = false
         scrollsToTop = true
         dataSource = self
-        prefetchDataSource = self
         delegate = self
 
         collectionViewLayout = CustomLayout(
@@ -97,43 +96,6 @@ extension DogsCollectionView: UICollectionViewDelegate {
                 cell.addImage(image)
                 cell.hideSpinnerInImage()
             }
-        }
-    }
-}
-
-extension DogsCollectionView: UICollectionViewDataSourcePrefetching {
-    func collectionView(_ collectionView: UICollectionView, prefetchItemsAt indexPaths: [IndexPath]) {
-
-        for indexPath in indexPaths {
-            guard let cell = dequeueReusableCell(
-                withReuseIdentifier: String(describing: DogCell.self),
-                for: indexPath
-            ) as? DogCell,
-               let imageId = viewModelData?.first(where: {
-                   $0.id == cell.id
-               })?.imageId else {
-                return
-            }
-
-            guard let cellId = cell.id, let image = viewModel?.inCache(id: cellId) else {
-                cell.showSpinnerInImage()
-
-                Task {
-                    guard let image = await viewModel?.loadImage(by: imageId) else {
-                        cell.hideSpinnerInImage()
-                        return
-                    }
-
-                    await MainActor.run {
-                        cell.addImage(image)
-                        cell.hideSpinnerInImage()
-                    }
-                }
-
-                return
-            }
-
-            cell.addImage(image)
         }
     }
 }

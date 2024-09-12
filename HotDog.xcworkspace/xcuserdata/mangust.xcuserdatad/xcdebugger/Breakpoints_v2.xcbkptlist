@@ -7,32 +7,320 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "672C3169-1D32-480A-B797-A513A9AB9C02"
-            shouldBeEnabled = "Yes"
+            uuid = "6C3A9D5A-0FB0-41D8-9A95-0B0593FB99DB"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "HotDog/Modules/Dogs/View/DogsCollectionView.swift"
+            filePath = "HotDog/Services/ImageDownloaderService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "106"
-            endingLineNumber = "106"
-            landmarkName = "collectionView(_:prefetchItemsAt:)"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "loadImages(from:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "2ABF3747-943E-4B88-B3DE-9DAEB7AE8F2D"
+            uuid = "C1ADC3BC-4864-4988-838D-31795E506D54"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "HotDog/Modules/Dogs/View/DogsCollectionView.swift"
+            filePath = "HotDog/Services/ImageDownloaderService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
-            landmarkName = "collectionView(_:cellForItemAt:)"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "loadImages(from:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "84CF1152-B5B8-4A90-B1E4-BE89C96E9AED"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HotDog/Services/ImageDownloaderService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "loadImages(from:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "384A3E00-5C86-4E89-B3F1-022AF2D3F206"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HotDog/Services/ImageDownloaderService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "loadImages(from:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C8CCDF34-4E8A-4EC3-9FBC-3C644B78A457"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HotDog/Services/ImageDownloaderService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "loadImages(from:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A259E260-8DC4-480C-9A20-DEBEA1C423DD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HotDog/Modules/Dogs/View/CollectionView/DogsCollectionView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "collectionDataSource"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "08D1534D-1D83-4355-A10D-7C356079F095"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HotDog/Modules/Dogs/View/CollectionView/DogsCollectionView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "collectionDataSource"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "72F79632-BC41-43A8-996B-425DF869186D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HotDog/Services/CacheService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "download(urlsSet:didLoadImages:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D6334C47-8093-4AE2-86F2-9DDF3CC7F78A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HotDog/Modules/Dogs/View/CollectionView/DogsCollectionView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
+            landmarkName = "DogsCollectionView"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "D6334C47-8093-4AE2-86F2-9DDF3CC7F78A - c0c6ff9988947b0d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HotDog.DogsCollectionView.init() -&gt; HotDog.DogsCollectionView"
+                  moduleName = "HotDog"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mangust/Documents/HotDogs/HotDog/Modules/Dogs/View/CollectionView/DogsCollectionView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "121"
+                  endingLineNumber = "121"
+                  offsetFromSymbolStart = "205">
+               </Location>
+               <Location
+                  uuid = "D6334C47-8093-4AE2-86F2-9DDF3CC7F78A - 7e7be2e595bbf3ce"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HotDog.DogsCollectionView.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;HotDog.DogsCollectionView&gt;"
+                  moduleName = "HotDog"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mangust/Documents/HotDogs/HotDog/Modules/Dogs/View/CollectionView/DogsCollectionView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "121"
+                  endingLineNumber = "121"
+                  offsetFromSymbolStart = "179">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1B915B8F-FD86-4EF4-A2BD-4ADE39FF1FD8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HotDog/Modules/Dogs/View/CollectionView/DogsCollectionView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "DogsCollectionView"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "1B915B8F-FD86-4EF4-A2BD-4ADE39FF1FD8 - c0c6ff9988947b0d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HotDog.DogsCollectionView.init() -&gt; HotDog.DogsCollectionView"
+                  moduleName = "HotDog"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mangust/Documents/HotDogs/HotDog/Modules/Dogs/View/CollectionView/DogsCollectionView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "121"
+                  endingLineNumber = "121"
+                  offsetFromSymbolStart = "205">
+               </Location>
+               <Location
+                  uuid = "1B915B8F-FD86-4EF4-A2BD-4ADE39FF1FD8 - 7e7be2e595bbf3ce"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HotDog.DogsCollectionView.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;HotDog.DogsCollectionView&gt;"
+                  moduleName = "HotDog"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mangust/Documents/HotDogs/HotDog/Modules/Dogs/View/CollectionView/DogsCollectionView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "121"
+                  endingLineNumber = "121"
+                  offsetFromSymbolStart = "179">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B2DEE9B6-FCB7-4F0D-8A67-B122FE5942F5"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HotDog/Modules/Dogs/View/DogsController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "113"
+            endingLineNumber = "113"
+            landmarkName = "loadData(callback:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B2DEE9B6-FCB7-4F0D-8A67-B122FE5942F5 - e8de148e15a5f62f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for closure #1 @Sendable () async -&gt; () in HotDog.DogsController.loadData(callback: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "HotDog"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mangust/Documents/HotDogs/HotDog/Modules/Dogs/View/DogsController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "115"
+                  endingLineNumber = "115"
+                  offsetFromSymbolStart = "281">
+               </Location>
+               <Location
+                  uuid = "B2DEE9B6-FCB7-4F0D-8A67-B122FE5942F5 - d2c4040db09eb22d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in HotDog.DogsController.loadData(callback: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "HotDog"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mangust/Documents/HotDogs/HotDog/Modules/Dogs/View/DogsController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "115"
+                  endingLineNumber = "115"
+                  offsetFromSymbolStart = "175">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9815C28B-B40F-4331-9D53-DDE96221B89E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HotDog/Modules/Dogs/View/DogsController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
+            landmarkName = "loadData(callback:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "329C558C-16C3-4B8F-9DA6-750E2FD84601"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HotDog/Modules/Dogs/View/DogsController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
+            landmarkName = "configureConstraints()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "14D78E33-FBC2-4995-977F-5704CC7B89D9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HotDog/Modules/Dogs/View/DogsController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
+            landmarkName = "loadData(callback:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
