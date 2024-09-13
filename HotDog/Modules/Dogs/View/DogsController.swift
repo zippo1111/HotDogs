@@ -35,15 +35,7 @@ final class DogsController: UIViewController {
 
         view.backgroundColor = Colors.red
 
-        loadData(callback: { [weak self] in
-            DispatchQueue.main.async {
-                self?.refreshCollection()
-            }
-        }, callbackImages: { [weak self] in
-            DispatchQueue.main.async {
-                self?.refreshCollection()
-            }
-        })
+        loadData()
 
         setupSearch()
         setupNavigation()
@@ -108,7 +100,7 @@ final class DogsController: UIViewController {
         }
     }
 
-    private func loadData(callback: (() -> Void)?, callbackImages: (() -> Void)?) {
+    private func loadData() {
         spinner.startAnimating()
 
         Task {
@@ -117,14 +109,12 @@ final class DogsController: UIViewController {
             }
 
             dogsViewModelData = data
-            callback?()
 
             guard let dataWithImages = await viewModel?.fetchDogsWithImages(by: data) else {
                 return
             }
 
             dogsViewModelData = dataWithImages
-            callbackImages?()
         }
     }
 
@@ -169,7 +159,11 @@ final class DogsController: UIViewController {
     var didFocusSearchBar: (() -> Void)?
     var didDefocusSearchBar: (() -> Void)?
 
-    private var dogsViewModelData: [DogBreedViewModel]?
+    private var dogsViewModelData: [DogBreedViewModel]? {
+        didSet {
+            refreshCollection()
+        }
+    }
     private var filteredDogs: [DogBreedViewModel]?
 
     private let viewModel: DogsViewModel?
