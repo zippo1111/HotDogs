@@ -35,11 +35,15 @@ final class DogsController: UIViewController {
 
         view.backgroundColor = Colors.red
 
-        loadData { [weak self] in
+        loadData(callback: { [weak self] in
             DispatchQueue.main.async {
                 self?.refreshCollection()
             }
-        }
+        }, callbackImages: { [weak self] in
+            DispatchQueue.main.async {
+                self?.refreshCollection()
+            }
+        })
 
         setupSearch()
         setupNavigation()
@@ -104,16 +108,23 @@ final class DogsController: UIViewController {
         }
     }
 
-    private func loadData(callback: (() -> Void)?) {
+    private func loadData(callback: (() -> Void)?, callbackImages: (() -> Void)?) {
         spinner.startAnimating()
+
         Task {
             guard let data = await viewModel?.fetchDogs() else {
-                spinner.stopAnimating()
                 return
             }
 
             dogsViewModelData = data
             callback?()
+
+            guard let dataWithImages = await viewModel?.fetchDogsWithImages(by: data) else {
+                return
+            }
+
+            dogsViewModelData = dataWithImages
+            callbackImages?()
         }
     }
 
@@ -121,10 +132,8 @@ final class DogsController: UIViewController {
         let data = (filteredDogs ?? []).isEmpty ? dogsViewModelData : filteredDogs
 
         collectionView.configure(
-            viewModelData: data,
-            viewModel: viewModel
+            viewModelData: data
         )
-        collectionView.reloadData()
 
         if spinner.isAnimating {
             spinner.stopAnimating()

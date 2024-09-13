@@ -19,17 +19,27 @@ final class DogsCollectionView: UICollectionView {
         fatalError("init(coder:) has not been implemented")
     }
 
-    func configure(viewModelData: [DogBreedViewModel]?, viewModel: DogsViewModel?) {
+    func configure(viewModelData: [DogBreedViewModel]?) {
         self.viewModelData = viewModelData
-        self.viewModel = viewModel
+
+        guard let viewModelData = viewModelData else {
+            return
+        }
+
+        var snapshot = NSDiffableDataSourceSnapshot<Section, DogBreedViewModel>()
+        snapshot.appendSections([.main])
+        snapshot.appendItems(viewModelData, toSection: .main)
+
+        DispatchQueue.main.async {
+            self.diffableDataSource.applySnapshotUsingReloadData(snapshot)
+        }
     }
 
     private func setupView() {
         backgroundColor = Colors.lightGray
         showsHorizontalScrollIndicator = false
         scrollsToTop = true
-        dataSource = self
-        delegate = self
+        dataSource = diffableDataSource
 
         collectionViewLayout = CustomLayout(
             interItemSpacing: Constants.offsetOuter,
@@ -49,55 +59,9 @@ final class DogsCollectionView: UICollectionView {
         )
     }
 
-    private var viewModel: DogsViewModel?
+    private var viewModel: DogsViewModelProtocol?
     private var viewModelData: [DogBreedViewModel]?
-    private var idsWithImagesToLoad = [Int: UIImage?]()
-
-}
-
-extension DogsCollectionView: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        viewModelData?.count ?? .zero
-    }
-
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if let cell = dequeueReusableCell(
-            withReuseIdentifier: String(describing: DogCell.self),
-            for: indexPath
-        ) as? DogCell {
-            let data = viewModelData?[safeIndex: indexPath.row]
-            cell.configure(viewModel: data)
-
-            return cell
-        } else {
-            return UICollectionViewCell()
-        }
-    }
-}
-
-extension DogsCollectionView: UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        guard let cell = (cell as? DogCell) else {
-            return
-        }
-
-        cell.showSpinnerInImage()
-
-        Task {
-            guard let imageId = viewModelData?.first(where: { $0.id == cell.id })?.imageId,
-                  let image = await viewModel?.loadImage(by: imageId) else {
-                DispatchQueue.main.async {
-                    cell.hideSpinnerInImage()
-                }
-                return
-            }
-
-            await MainActor.run {
-                cell.addImage(image)
-                cell.hideSpinnerInImage()
-            }
-        }
-    }
+    private lazy var diffableDataSource = DogsDiffableDataSource(collectionView: self, viewModel)
 }
 
 fileprivate extension DogsCollectionView {

@@ -35,14 +35,6 @@ final class DogCell: UICollectionViewCell {
         setupData(viewModel)
     }
 
-    func showSpinnerInImage() {
-        spinner.startAnimating()
-    }
-
-    func hideSpinnerInImage() {
-        spinner.stopAnimating()
-    }
-
     func addImage(_ image: UIImage) {
         imageView.image = image
     }
@@ -127,10 +119,26 @@ final class DogCell: UICollectionViewCell {
         \(viewModelData.origin ?? "")
         """
         id = viewModelData.id
+
+        guard let image = viewModelData.image else {
+            showSpinnerInImage()
+            return
+        }
+
+        hideSpinnerInImage()
+        addImage(image)
+    }
+
+    private func showSpinnerInImage() {
+        spinner.startAnimating()
+    }
+
+    private func hideSpinnerInImage() {
+        spinner.stopAnimating()
     }
 
     private func plusTapped() {
-        print("+++++")
+
     }
 
     var id: Int?
@@ -182,9 +190,6 @@ final class DogCell: UICollectionViewCell {
         label.lineBreakMode = .byWordWrapping
         label.numberOfLines = .zero
         label.textAlignment = .left
-
-
-
 
         return label
     }()

@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct DogBreedViewModel {
+struct DogBreedViewModel: Hashable {
     let id: Int
     let name: String
     let purpose: String?
@@ -16,4 +16,5 @@ struct DogBreedViewModel {
     let temperament: String
     let origin: String?
     let imageId: String
+    var image: UIImage?
 }

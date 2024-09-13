@@ -5,12 +5,9 @@
 //  Created by Mangust on 25.08.2024.
 //
 
-import UIKit
+import Foundation
 
 struct DogsService {
-    private var image: UIImage?
-    private let imageLoader = ImageLoader()
-
     func getDogBreeds() async -> [DogBreedEntity]? {
         let breeds: [DogBreedEntity]? = try? await getData(from: Hosts.breeds)
         return breeds
@@ -18,14 +15,6 @@ struct DogsService {
 
     func getImageAddress(by id: String) -> String? {
         "\(Hosts.imageById)/\(id)\(Hosts.imageExtension)"
-    }
-
-    mutating func loadImage(at source: URLRequest) async {
-        do {
-            image = try await imageLoader.fetch(source)
-        } catch {
-            print(error)
-        }
     }
 }
 

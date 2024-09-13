@@ -38,7 +38,8 @@
 		9AA5E1DE2C83D3C100E8D15F /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA5E1DD2C83D3C100E8D15F /* NavigationBar.swift */; };
 		9AA5E1E42C846DB200E8D15F /* SheetTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA5E1E12C846DB200E8D15F /* SheetTransitioningDelegate.swift */; };
 		9AA5E1E52C846DB200E8D15F /* SheetTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA5E1E22C846DB200E8D15F /* SheetTransition.swift */; };
-		9AD2C74C2C936C97000AC902 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD2C74B2C936C97000AC902 /* ImageLoader.swift */; };
+		9AD2C7512C9386BA000AC902 /* DogImageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD2C7502C9386BA000AC902 /* DogImageItem.swift */; };
+		9AD2C75A2C9398F5000AC902 /* DogsDiffableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD2C7592C9398F5000AC902 /* DogsDiffableDataSource.swift */; };
 		C9B880A28B55E143DC66342A /* Pods_HotDogTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6944F48DFFD0FBF5EC1DB4F8 /* Pods_HotDogTests.framework */; };
 		F77F35C8FD4C87A0A3F791C6 /* Pods_HotDog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EF8609ABD9900BBC565C38F /* Pods_HotDog.framework */; };
 /* End PBXBuildFile section */
@@ -100,7 +101,8 @@
 		9AA5E1DD2C83D3C100E8D15F /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		9AA5E1E12C846DB200E8D15F /* SheetTransitioningDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SheetTransitioningDelegate.swift; sourceTree = "<group>"; };
 		9AA5E1E22C846DB200E8D15F /* SheetTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SheetTransition.swift; sourceTree = "<group>"; };
-		9AD2C74B2C936C97000AC902 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		9AD2C7502C9386BA000AC902 /* DogImageItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogImageItem.swift; sourceTree = "<group>"; };
+		9AD2C7592C9398F5000AC902 /* DogsDiffableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogsDiffableDataSource.swift; sourceTree = "<group>"; };
 		ACB613FBB9185DCB181EDA3F /* Pods-HotDog-HotDogUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotDog-HotDogUITests.debug.xcconfig"; path = "Target Support Files/Pods-HotDog-HotDogUITests/Pods-HotDog-HotDogUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C105112CB71E8BB72C5AF9BF /* Pods-HotDog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotDog.debug.xcconfig"; path = "Target Support Files/Pods-HotDog/Pods-HotDog.debug.xcconfig"; sourceTree = "<group>"; };
 		D3BB2377C097AA66D1F2BDF4 /* Pods_HotDog_HotDogUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HotDog_HotDogUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -215,6 +217,7 @@
 		9A6F66C92C7F25E8005813CA /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				9AD2C74F2C9386AB000AC902 /* Model */,
 				9AA5E22C2C85F85C00E8D15F /* Search */,
 				9AA5E1DF2C846D8200E8D15F /* TransitionAnimation */,
 				9A6F66CA2C7F25EF005813CA /* UI */,
@@ -273,6 +276,7 @@
 			children = (
 				9A6F67202C7F4B6B005813CA /* DogsCollectionView.swift */,
 				9A6F66DE2C7F2634005813CA /* DogsController.swift */,
+				9AD2C7592C9398F5000AC902 /* DogsDiffableDataSource.swift */,
 				9A6F66DF2C7F2634005813CA /* Cell */,
 			);
 			path = View;
@@ -299,9 +303,8 @@
 		9A6F66FD2C7F2679005813CA /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				9A6F66FE2C7F2679005813CA /* ImageDownloaderService.swift */,
+				9AD2C7522C9386F8000AC902 /* ImageService */,
 				9A6F66FF2C7F2679005813CA /* DogsService.swift */,
-				9AD2C74B2C936C97000AC902 /* ImageLoader.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -373,6 +376,22 @@
 				9A67B4B72C867B1F0028C20C /* DogsSearchController.swift */,
 			);
 			path = Search;
+			sourceTree = "<group>";
+		};
+		9AD2C74F2C9386AB000AC902 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9AD2C7502C9386BA000AC902 /* DogImageItem.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9AD2C7522C9386F8000AC902 /* ImageService */ = {
+			isa = PBXGroup;
+			children = (
+				9A6F66FE2C7F2679005813CA /* ImageDownloaderService.swift */,
+			);
+			path = ImageService;
 			sourceTree = "<group>";
 		};
 		F90FA867419B678611046802 /* Frameworks */ = {
@@ -629,13 +648,14 @@
 				9A6F676A2C825395005813CA /* Extension+UISearchBar.swift in Sources */,
 				9A6F67002C7F2679005813CA /* ImageDownloaderService.swift in Sources */,
 				9A6F67262C7F4F9C005813CA /* DogBreedViewModel.swift in Sources */,
+				9AD2C75A2C9398F5000AC902 /* DogsDiffableDataSource.swift in Sources */,
 				9AA5E1DE2C83D3C100E8D15F /* NavigationBar.swift in Sources */,
 				9AA5E1E52C846DB200E8D15F /* SheetTransition.swift in Sources */,
+				9AD2C7512C9386BA000AC902 /* DogImageItem.swift in Sources */,
 				9A6F66F22C7F2634005813CA /* DogsController.swift in Sources */,
 				9A6F66FB2C7F2663005813CA /* Extension+Array.swift in Sources */,
 				9A6F66EB2C7F2634005813CA /* DogsModel.swift in Sources */,
 				9A6F67122C7F2A88005813CA /* MenuModel.swift in Sources */,
-				9AD2C74C2C936C97000AC902 /* ImageLoader.swift in Sources */,
 				9A67B4B82C867B1F0028C20C /* DogsSearchController.swift in Sources */,
 				9A6F66FC2C7F2663005813CA /* Extension+ScrollView.swift in Sources */,
 				9A6F66982C7F255D005813CA /* AppDelegate.swift in Sources */,
