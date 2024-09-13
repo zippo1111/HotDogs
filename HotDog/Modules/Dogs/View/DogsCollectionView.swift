@@ -61,7 +61,7 @@ final class DogsCollectionView: UICollectionView {
 
     private var viewModel: DogsViewModelProtocol?
     private var viewModelData: [DogBreedViewModel]?
-    private lazy var diffableDataSource = DogsDiffableDataSource(collectionView: self, viewModel)
+    private lazy var diffableDataSource = DogsDiffableDataSourceStrategy(collectionView: self, viewModel)
 }
 
 fileprivate extension DogsCollectionView {
