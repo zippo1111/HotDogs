@@ -1,6 +1,6 @@
 # HotDogs
 
-
+![](https://github.com/zippo1111/HotDogs/blob/Develop/intro.gif)
 
 - Diffable dataSource
 - Compositional layout
